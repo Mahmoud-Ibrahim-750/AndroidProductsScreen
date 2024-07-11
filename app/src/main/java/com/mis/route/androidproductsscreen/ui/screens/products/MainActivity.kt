@@ -1,10 +1,11 @@
-package com.mis.route.androidproductsscreen
+package com.mis.route.androidproductsscreen.ui.screens.products
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.mis.route.androidproductsscreen.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
