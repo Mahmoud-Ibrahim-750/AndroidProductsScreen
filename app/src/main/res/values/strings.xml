@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidProductsScreen</string>
+    <string name="review_label">Review</string>
 </resources>
