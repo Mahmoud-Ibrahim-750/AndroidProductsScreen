@@ -68,4 +68,26 @@ data class Product(
 
     @field:SerializedName("thumbnail")
     val thumbnail: String? = null,
-)
+) {
+    fun getPriceAfterDiscount(): Double {
+        val priceValue = price ?: return 0.0
+        val discountPercent = discountPercentage ?: 0.0
+
+        val discountValue = priceValue * (discountPercent / 100)
+        return price - discountValue
+    }
+
+    fun getReviewsAverage(): Double {
+        val reviews = reviews ?: return 0.0
+
+        var totalRating = 0.0
+        var ratingCounter = 0
+        for (review in reviews) {
+            if (review?.rating == null) continue
+            totalRating += review.rating
+            ratingCounter++
+        }
+
+        return totalRating / ratingCounter
+    }
+}
